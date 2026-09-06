@@ -804,7 +804,28 @@
   }
 
   function applyTheme(){document.body.classList.toggle("light",state.theme==="light");}
-  function renderAll(){refreshProfile();renderProfilePage();renderMission();renderRoad();renderDays();renderConcepts();renderTools();renderLessons();renderExams();renderStats();renderAchievements();renderLeaderboard([]);loadLeaderboard();}
+  function safeRender(name, fn){
+    try { fn(); }
+    catch(err){ console.error("POOLER_RENDER_ERROR:"+name, err); }
+  }
+  function renderAll(){
+    safeRender("profile", refreshProfile);
+    safeRender("profile-page", renderProfilePage);
+    safeRender("mission", renderMission);
+    safeRender("roadmap", renderRoad);
+    safeRender("days", renderDays);
+    safeRender("concepts", renderConcepts);
+    safeRender("tools", renderTools);
+    safeRender("lessons", renderLessons);
+    safeRender("exams", renderExams);
+    safeRender("stats", renderStats);
+    safeRender("achievements", renderAchievements);
+    safeRender("leaderboard", ()=>renderLeaderboard([]));
+    loadLeaderboard();
+  }
+
+  window.addEventListener("error", e => console.error("POOLER_RUNTIME_ERROR", e.error || e.message));
+  window.addEventListener("unhandledrejection", e => console.error("POOLER_ASYNC_ERROR", e.reason));
 
   markActivity(); applyTheme(); applyLang(); initEditor(); initFocus(); initGlobalSearch(); renderAll(); renderFilters(); restoreView(); refreshAccountUI(); initAuth();
   setTimeout(startOnboarding, 250);
