@@ -1,0 +1,2745 @@
+window.POOLER_EXERCISES = [
+  {
+    "id": "E001",
+    "day": "Day 00",
+    "title": "ft_putchar",
+    "description": "Print one character.",
+    "tag": "write",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_putchar(char c)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "prints Z",
+        "harness": "int main(void){ft_putchar('Z');return(0);}",
+        "expected": "Z"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E002",
+    "day": "Day 00",
+    "title": "ft_print_alphabet",
+    "description": "Display a to z.",
+    "tag": "loops",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_print_alphabet(void)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "alphabet",
+        "harness": "int main(void){ft_print_alphabet();return(0);}",
+        "expected": "abcdefghijklmnopqrstuvwxyz"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E003",
+    "day": "Day 00",
+    "title": "ft_print_reverse_alphabet",
+    "description": "Display z to a.",
+    "tag": "loops",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_print_reverse_alphabet(void)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse",
+        "harness": "int main(void){ft_print_reverse_alphabet();return(0);}",
+        "expected": "zyxwvutsrqponmlkjihgfedcba"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E004",
+    "day": "Day 00",
+    "title": "ft_print_numbers",
+    "description": "Display 0 to 9.",
+    "tag": "loops",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_print_numbers(void)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "digits",
+        "harness": "int main(void){ft_print_numbers();return(0);}",
+        "expected": "0123456789"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E005",
+    "day": "Day 00",
+    "title": "ft_is_negative",
+    "description": "Print N for negative, P otherwise.",
+    "tag": "conditions",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_is_negative(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "negative",
+        "harness": "int main(void){ft_is_negative(-7);return(0);}",
+        "expected": "N"
+      },
+      {
+        "name": "zero",
+        "harness": "int main(void){ft_is_negative(0);return(0);}",
+        "expected": "P"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E006",
+    "day": "Day 00",
+    "title": "ft_swap",
+    "description": "Swap two integers using pointers.",
+    "tag": "pointers",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_swap(int *a, int *b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "swap",
+        "harness": "int main(void){int a=4,b=9;ft_swap(&a,&b);if(a!=9||b!=4)return(1);return(0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E007",
+    "day": "Day 00",
+    "title": "ft_div_mod",
+    "description": "Store quotient and remainder through pointers.",
+    "tag": "pointers",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_div_mod(int a, int b, int *div, int *mod)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "17 / 5",
+        "harness": "int main(void){int d=0,m=0;ft_div_mod(17,5,&d,&m);if(d!=3||m!=2)return(1);return(0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E008",
+    "day": "Day 00",
+    "title": "ft_putnbr",
+    "description": "Print a signed integer without printf.",
+    "tag": "recursion",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_putnbr(int nb)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "negative",
+        "harness": "int main(void){ft_putnbr(-42);return(0);}",
+        "expected": "-42"
+      },
+      {
+        "name": "zero",
+        "harness": "int main(void){ft_putnbr(0);return(0);}",
+        "expected": "0"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E009",
+    "day": "Day 00",
+    "title": "ft_countdown",
+    "description": "Print 9 down to 0.",
+    "tag": "loops",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_countdown(void)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "countdown",
+        "harness": "int main(void){ft_countdown();return(0);}",
+        "expected": "9876543210"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E010",
+    "day": "Day 00",
+    "title": "ft_print_even",
+    "description": "Print even digits only.",
+    "tag": "conditions",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_print_even(void)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "even digits",
+        "harness": "int main(void){ft_print_even();return(0);}",
+        "expected": "02468"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E011",
+    "day": "Day 01",
+    "title": "ft_ultimate_ft",
+    "description": "Make a pointer point to 42 through ten levels.",
+    "tag": "pointers",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_ultimate_ft(int **********nbr)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "ten pointers",
+        "harness": "int main(void){int n=0,*p1=&n,**p2=&p1,***p3=&p2,****p4=&p3,*****p5=&p4,******p6=&p5,*******p7=&p6,********p8=&p7,*********p9=&p8,**********p10=&p9;ft_ultimate_ft(p10);return n==42?0:1;}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E012",
+    "day": "Day 01",
+    "title": "ft_putstr",
+    "description": "Print a string.",
+    "tag": "write",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_putstr(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "hello",
+        "harness": "int main(void){ft_putstr(\"hello\");return(0);}",
+        "expected": "hello"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E013",
+    "day": "Day 01",
+    "title": "ft_strlen",
+    "description": "Return string length.",
+    "tag": "strings",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_strlen(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "hello",
+        "harness": "int main(void){return(ft_strlen(\"hello\")!=5);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E014",
+    "day": "Day 01",
+    "title": "ft_strcpy",
+    "description": "Copy src into dest and return dest.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_strcpy(char *dest, char *src)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "copy",
+        "harness": "int main(void){char d[16];ft_strcpy(d,\"pool\");return(d[0]!='p'||d[3]!='l'||d[4]!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E015",
+    "day": "Day 01",
+    "title": "ft_str_is_alpha",
+    "description": "Return 1 only if all chars are alphabetic.",
+    "tag": "validation",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_is_alpha(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "letters",
+        "harness": "int main(void){return(ft_str_is_alpha(\"Pool\")!=1);}",
+        "expected": ""
+      },
+      {
+        "name": "mixed",
+        "harness": "int main(void){return(ft_str_is_alpha(\"P00l\")!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E016",
+    "day": "Day 01",
+    "title": "ft_str_is_numeric",
+    "description": "Return 1 only if all chars are digits.",
+    "tag": "validation",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_is_numeric(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "digits",
+        "harness": "int main(void){return(ft_str_is_numeric(\"1337\")!=1);}",
+        "expected": ""
+      },
+      {
+        "name": "mixed",
+        "harness": "int main(void){return(ft_str_is_numeric(\"13a7\")!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E017",
+    "day": "Day 01",
+    "title": "ft_strcmp",
+    "description": "Compare two strings.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_strcmp(char *s1, char *s2)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "equal",
+        "harness": "int main(void){return(ft_strcmp(\"abc\",\"abc\")!=0);}",
+        "expected": ""
+      },
+      {
+        "name": "less",
+        "harness": "int main(void){return(!(ft_strcmp(\"abc\",\"abd\")<0));}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E018",
+    "day": "Day 01",
+    "title": "ft_strncpy",
+    "description": "Copy at most n bytes.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_strncpy(char *dest, char *src, unsigned int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "bounded copy",
+        "harness": "int main(void){char d[8]=\"xxxxxxx\";ft_strncpy(d,\"abcdef\",3);return(d[0]!='a'||d[2]!='c'||d[3]!='x');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E019",
+    "day": "Day 01",
+    "title": "ft_strstr",
+    "description": "Find the first occurrence of a needle.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_strstr(char *str, char *to_find)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "find",
+        "harness": "int main(void){char*s=ft_strstr(\"hello pool\",\"pool\");return(!s||*s!='p');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E020",
+    "day": "Day 01",
+    "title": "ft_str_reverse",
+    "description": "Reverse a string in place.",
+    "tag": "pointers",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_str_reverse(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse",
+        "harness": "int main(void){char s[8]=\"abcde\";ft_str_reverse(s);return(s[0]!='e'||s[4]!='a');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E021",
+    "day": "Day 02",
+    "title": "ft_str_is_lowercase",
+    "description": "Validate lowercase letters.",
+    "tag": "validation",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_is_lowercase(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "lower",
+        "harness": "int main(void){return(ft_str_is_lowercase(\"abc\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E022",
+    "day": "Day 02",
+    "title": "ft_str_is_uppercase",
+    "description": "Validate uppercase letters.",
+    "tag": "validation",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_is_uppercase(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "upper",
+        "harness": "int main(void){return(ft_str_is_uppercase(\"ABC\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E023",
+    "day": "Day 02",
+    "title": "ft_str_is_printable",
+    "description": "Validate printable ASCII.",
+    "tag": "validation",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_is_printable(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "printable",
+        "harness": "int main(void){return(ft_str_is_printable(\"Pool 1337!\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E024",
+    "day": "Day 02",
+    "title": "ft_strupcase",
+    "description": "Uppercase a string in place.",
+    "tag": "case",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_strupcase(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "uppercase",
+        "harness": "int main(void){char s[8]=\"pOol\";ft_strupcase(s);return(s[0]!='P'||s[1]!='O'||s[2]!='O'||s[3]!='L');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E025",
+    "day": "Day 02",
+    "title": "ft_strlowcase",
+    "description": "Lowercase a string in place.",
+    "tag": "case",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_strlowcase(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "lowercase",
+        "harness": "int main(void){char s[8]=\"POoL\";ft_strlowcase(s);return(s[0]!='p'||s[3]!='l');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E026",
+    "day": "Day 02",
+    "title": "ft_strcapitalize",
+    "description": "Capitalize the first letter of words.",
+    "tag": "case",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_strcapitalize(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "words",
+        "harness": "int main(void){char s[64]=\"salut, comment tu vas ? 42mots quarante-deux\";ft_strcapitalize(s);return(s[0]!='S'||s[7]!='C');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E027",
+    "day": "Day 02",
+    "title": "ft_strncmp",
+    "description": "Compare at most n chars.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_strncmp(char *s1, char *s2, unsigned int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "bounded equal",
+        "harness": "int main(void){return(ft_strncmp(\"abc\",\"abd\",2)!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E028",
+    "day": "Day 02",
+    "title": "ft_strlcpy",
+    "description": "Copy safely with a size limit and return src length.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nunsigned int\tft_strlcpy(char *dest, char *src, unsigned int size)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "size three",
+        "harness": "int main(void){char d[4]=\"xxx\";unsigned int n=ft_strlcpy(d,\"abcdef\",3);return(n!=6||d[2]!='b'||d[3]!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E029",
+    "day": "Day 02",
+    "title": "ft_str_count",
+    "description": "Count occurrences of a character.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_count(char *str, char c)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "count o",
+        "harness": "int main(void){return(ft_str_count(\"pool\",'o')!=2);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E030",
+    "day": "Day 02",
+    "title": "ft_char_index",
+    "description": "Return first index of a character or -1.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_char_index(char *str, char c)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "index",
+        "harness": "int main(void){return(ft_char_index(\"abcde\",'d')!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E031",
+    "day": "Day 03",
+    "title": "ft_atoi",
+    "description": "Convert leading integer text to int.",
+    "tag": "parsing",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_atoi(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "negative",
+        "harness": "int main(void){return(ft_atoi(\"  -42\")!=-42);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E032",
+    "day": "Day 03",
+    "title": "ft_atoi_base10",
+    "description": "Parse a signed decimal without library helpers.",
+    "tag": "parsing",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_atoi_base10(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "number",
+        "harness": "int main(void){return(ft_atoi_base10(\"+1337\")!=1337);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E033",
+    "day": "Day 03",
+    "title": "ft_putnbr_base",
+    "description": "Print an integer in a custom base.",
+    "tag": "recursion",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_putnbr_base(int nbr, char *base)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "hex",
+        "harness": "int main(void){ft_putnbr_base(42,\"0123456789ABCDEF\");return(0);}",
+        "expected": "2A"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E034",
+    "day": "Day 03",
+    "title": "ft_str_is_hex",
+    "description": "Validate hexadecimal text.",
+    "tag": "validation",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_str_is_hex(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "hex",
+        "harness": "int main(void){return(ft_str_is_hex(\"1aF09\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E035",
+    "day": "Day 03",
+    "title": "ft_word_count",
+    "description": "Count words separated by spaces and tabs.",
+    "tag": "parsing",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_word_count(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "three words",
+        "harness": "int main(void){return(ft_word_count(\"one  two\\tthree\")!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E036",
+    "day": "Day 03",
+    "title": "ft_trim_spaces",
+    "description": "Trim leading/trailing ASCII spaces in place.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_trim_spaces(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "trim",
+        "harness": "int main(void){char s[32]=\"  pool  \";char*r=ft_trim_spaces(s);return(!r||r[0]!='p'||r[4]!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E037",
+    "day": "Day 03",
+    "title": "ft_is_palindrome",
+    "description": "Return 1 if a string reads the same backwards.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_is_palindrome(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "palindrome",
+        "harness": "int main(void){return(ft_is_palindrome(\"level\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E038",
+    "day": "Day 03",
+    "title": "ft_str_rotate",
+    "description": "Rotate a string left by n positions.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_str_rotate(char *str, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "rotate two",
+        "harness": "int main(void){char s[8]=\"abcdef\";ft_str_rotate(s,2);return(s[0]!='c'||s[5]!='b');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E039",
+    "day": "Day 03",
+    "title": "ft_first_unique",
+    "description": "Return index of first non-repeated character, or -1.",
+    "tag": "parsing",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_first_unique(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "unique",
+        "harness": "int main(void){return(ft_first_unique(\"swiss\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E040",
+    "day": "Day 03",
+    "title": "ft_str_join_space",
+    "description": "Join two strings with one space into dest.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nchar\t*ft_str_join_space(char *dest, char *a, char *b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "join",
+        "harness": "int main(void){char d[32];ft_str_join_space(d,\"hello\",\"pool\");return(d[0]!='h'||d[5]!=' '||d[6]!='p'||d[10]!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E041",
+    "day": "Day 04",
+    "title": "ft_factorial",
+    "description": "Return iterative factorial; negatives give 0.",
+    "tag": "math",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_factorial(int nb)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "5!",
+        "harness": "int main(void){return(ft_factorial(5)!=120);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E042",
+    "day": "Day 04",
+    "title": "ft_factorial_rec",
+    "description": "Return recursive factorial.",
+    "tag": "recursion",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_factorial_rec(int nb)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "6!",
+        "harness": "int main(void){return(ft_factorial_rec(6)!=720);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E043",
+    "day": "Day 04",
+    "title": "ft_power",
+    "description": "Return iterative exponentiation.",
+    "tag": "math",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_power(int nb, int power)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "2^8",
+        "harness": "int main(void){return(ft_power(2,8)!=256);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E044",
+    "day": "Day 04",
+    "title": "ft_power_rec",
+    "description": "Return recursive exponentiation.",
+    "tag": "recursion",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_power_rec(int nb, int power)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "3^4",
+        "harness": "int main(void){return(ft_power_rec(3,4)!=81);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E045",
+    "day": "Day 04",
+    "title": "ft_fibonacci",
+    "description": "Return nth Fibonacci number.",
+    "tag": "recursion",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_fibonacci(int index)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "fib 10",
+        "harness": "int main(void){return(ft_fibonacci(10)!=55);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E046",
+    "day": "Day 04",
+    "title": "ft_sqrt",
+    "description": "Return integer square root or 0 if not a perfect square.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_sqrt(int nb)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "sqrt 81",
+        "harness": "int main(void){return(ft_sqrt(81)!=9);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E047",
+    "day": "Day 04",
+    "title": "ft_is_prime",
+    "description": "Return 1 if number is prime.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_is_prime(int nb)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "prime",
+        "harness": "int main(void){return(ft_is_prime(97)!=1);}",
+        "expected": ""
+      },
+      {
+        "name": "composite",
+        "harness": "int main(void){return(ft_is_prime(99)!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E048",
+    "day": "Day 04",
+    "title": "ft_find_next_prime",
+    "description": "Return the first prime >= nb.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_find_next_prime(int nb)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "next",
+        "harness": "int main(void){return(ft_find_next_prime(100)!=101);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E049",
+    "day": "Day 04",
+    "title": "ft_gcd",
+    "description": "Return greatest common divisor.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_gcd(int a, int b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "gcd",
+        "harness": "int main(void){return(ft_gcd(84,30)!=6);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E050",
+    "day": "Day 04",
+    "title": "ft_lcm",
+    "description": "Return least common multiple.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_lcm(int a, int b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "lcm",
+        "harness": "int main(void){return(ft_lcm(12,18)!=36);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E051",
+    "day": "Day 05",
+    "title": "ft_iterative_power",
+    "description": "Power with explicit loop and edge cases.",
+    "tag": "loops",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_iterative_power(int nb, int power)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "edge zero",
+        "harness": "int main(void){return(ft_iterative_power(7,0)!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E052",
+    "day": "Day 05",
+    "title": "ft_recursive_sum",
+    "description": "Sum 1..n recursively.",
+    "tag": "recursion",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_recursive_sum(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "sum 10",
+        "harness": "int main(void){return(ft_recursive_sum(10)!=55);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E053",
+    "day": "Day 05",
+    "title": "ft_collatz_steps",
+    "description": "Count steps until n reaches 1.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_collatz_steps(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "13",
+        "harness": "int main(void){return(ft_collatz_steps(13)!=9);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E054",
+    "day": "Day 05",
+    "title": "ft_count_digits",
+    "description": "Count decimal digits of a signed int.",
+    "tag": "math",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_count_digits(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "negative",
+        "harness": "int main(void){return(ft_count_digits(-12030)!=5);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E055",
+    "day": "Day 05",
+    "title": "ft_reverse_int",
+    "description": "Reverse digits of an integer.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_reverse_int(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse",
+        "harness": "int main(void){return(ft_reverse_int(12340)!=4321);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E056",
+    "day": "Day 05",
+    "title": "ft_digit_sum",
+    "description": "Sum decimal digits.",
+    "tag": "math",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_digit_sum(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "sum",
+        "harness": "int main(void){return(ft_digit_sum(4096)!=19);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E057",
+    "day": "Day 05",
+    "title": "ft_is_power_of_two",
+    "description": "Return 1 if n is a power of two.",
+    "tag": "bits",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_is_power_of_two(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "32",
+        "harness": "int main(void){return(ft_is_power_of_two(32)!=1);}",
+        "expected": ""
+      },
+      {
+        "name": "18",
+        "harness": "int main(void){return(ft_is_power_of_two(18)!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E058",
+    "day": "Day 05",
+    "title": "ft_count_set_bits",
+    "description": "Count 1 bits in an unsigned int.",
+    "tag": "bits",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_count_set_bits(unsigned int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "7",
+        "harness": "int main(void){return(ft_count_set_bits(7)!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E059",
+    "day": "Day 05",
+    "title": "ft_is_even",
+    "description": "Return 1 for even numbers.",
+    "tag": "conditions",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_is_even(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "42",
+        "harness": "int main(void){return(ft_is_even(42)!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E060",
+    "day": "Day 05",
+    "title": "ft_abs",
+    "description": "Return absolute value safely for normal int inputs.",
+    "tag": "math",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_abs(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "negative",
+        "harness": "int main(void){return(ft_abs(-42)!=42);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E061",
+    "day": "Day 06",
+    "title": "ft_print_args",
+    "description": "Print command-line arguments, one per line.",
+    "tag": "argc/argv",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tmain(int argc, char **argv)\n{\n\t/* TODO */\n\t(void)argc; (void)argv;\n\treturn (0);\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E062",
+    "day": "Day 06",
+    "title": "ft_argc",
+    "description": "Return argc from a wrapper function.",
+    "tag": "argc/argv",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_argc(int argc, char **argv)\n{\n\t(void)argv;\n\treturn (argc);\n}\n",
+    "tests": [
+      {
+        "name": "three",
+        "harness": "int main(void){char*a[]={\"x\",\"a\",\"b\",\"c\",0};return(ft_argc(4,a)!=4);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E063",
+    "day": "Day 06",
+    "title": "ft_find_arg",
+    "description": "Return index of an exact argument, or -1.",
+    "tag": "argc/argv",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_find_arg(int argc, char **argv, char *target)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "find",
+        "harness": "int main(void){char*a[]={\"./a\",\"foo\",\"bar\",0};return(ft_find_arg(3,a,\"bar\")!=2);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E064",
+    "day": "Day 06",
+    "title": "ft_longest_arg",
+    "description": "Return index of the longest argument.",
+    "tag": "argc/argv",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_longest_arg(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "longest",
+        "harness": "int main(void){char*a[]={\"./a\",\"hi\",\"pooler\",0};return(ft_longest_arg(3,a)!=2);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E065",
+    "day": "Day 06",
+    "title": "ft_print_reverse_args",
+    "description": "Print argv in reverse order, excluding program name.",
+    "tag": "argc/argv",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_print_reverse_args(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse args",
+        "harness": "int main(void){char*a[]={\"./a\",\"one\",\"two\",0};ft_print_reverse_args(3,a);return(0);}",
+        "expected": "two\none\n"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E066",
+    "day": "Day 06",
+    "title": "ft_sort_args",
+    "description": "Sort argv strings in ASCII order in place.",
+    "tag": "argc/argv",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_sort_args(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "sort",
+        "harness": "int main(void){char*a[]={\"./a\",\"z\",\"a\",\"m\",0};ft_sort_args(4,a);return(a[1][0]!='a'||a[2][0]!='m'||a[3][0]!='z');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E067",
+    "day": "Day 06",
+    "title": "ft_arg_digits",
+    "description": "Count numeric-only arguments.",
+    "tag": "argc/argv",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_arg_digits(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "count",
+        "harness": "int main(void){char*a[]={\"./a\",\"12\",\"abc\",\"007\",0};return(ft_arg_digits(4,a)!=2);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E068",
+    "day": "Day 06",
+    "title": "ft_arg_total_len",
+    "description": "Return total length of argv[1..].",
+    "tag": "argc/argv",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_arg_total_len(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "length",
+        "harness": "int main(void){char*a[]={\"./a\",\"abc\",\"de\",0};return(ft_arg_total_len(3,a)!=5);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E069",
+    "day": "Day 06",
+    "title": "ft_arg_contains",
+    "description": "Return 1 if any argument contains a substring.",
+    "tag": "argc/argv",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_arg_contains(int argc, char **argv, char *needle)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "contains",
+        "harness": "int main(void){char*a[]={\"./a\",\"hello\",\"pool\",0};return(ft_arg_contains(3,a,\"oo\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E070",
+    "day": "Day 06",
+    "title": "ft_print_env_like",
+    "description": "Print argv entries prefixed with an index.",
+    "tag": "argc/argv",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tft_print_env_like(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E071",
+    "day": "Day 07",
+    "title": "ft_range",
+    "description": "Allocate an int array from min inclusive to max exclusive.",
+    "tag": "malloc",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\nint\t*ft_range(int min, int max)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "range",
+        "harness": "int main(void){int*r=ft_range(3,7);if(!r)return(1);int ok=r[0]==3&&r[3]==6;free(r);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E072",
+    "day": "Day 07",
+    "title": "ft_range_reverse",
+    "description": "Allocate descending integers from max to min exclusive.",
+    "tag": "malloc",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\nint\t*ft_range_reverse(int min, int max)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse range",
+        "harness": "int main(void){int*r=ft_range_reverse(3,7);if(!r)return(1);int ok=r[0]==6&&r[3]==3;free(r);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E073",
+    "day": "Day 07",
+    "title": "ft_strdup",
+    "description": "Duplicate a string with malloc.",
+    "tag": "malloc",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_strdup(char *src)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "duplicate",
+        "harness": "int main(void){char*s=ft_strdup(\"pool\");if(!s)return(1);int ok=s[0]=='p'&&s[4]==0;free(s);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E074",
+    "day": "Day 07",
+    "title": "ft_int_sum",
+    "description": "Return sum of an int array.",
+    "tag": "arrays",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_int_sum(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "sum",
+        "harness": "int main(void){int a[]={2,4,6,8};return(ft_int_sum(a,4)!=20);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E075",
+    "day": "Day 07",
+    "title": "ft_int_max",
+    "description": "Return maximum element.",
+    "tag": "arrays",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_int_max(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "max",
+        "harness": "int main(void){int a[]={-3,7,2,5};return(ft_int_max(a,4)!=7);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E076",
+    "day": "Day 07",
+    "title": "ft_int_min",
+    "description": "Return minimum element.",
+    "tag": "arrays",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_int_min(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "min",
+        "harness": "int main(void){int a[]={-3,7,2,5};return(ft_int_min(a,4)!=-3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E077",
+    "day": "Day 07",
+    "title": "ft_reverse_int_array",
+    "description": "Reverse an integer array in place.",
+    "tag": "arrays",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_reverse_int_array(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse",
+        "harness": "int main(void){int a[]={1,2,3,4};ft_reverse_int_array(a,4);return(a[0]!=4||a[3]!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E078",
+    "day": "Day 07",
+    "title": "ft_sort_int_array",
+    "description": "Sort an integer array ascending.",
+    "tag": "arrays",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_sort_int_array(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "sort",
+        "harness": "int main(void){int a[]={4,1,3,2};ft_sort_int_array(a,4);return(a[0]!=1||a[3]!=4);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E079",
+    "day": "Day 07",
+    "title": "ft_count_value",
+    "description": "Count occurrences of a value in an array.",
+    "tag": "arrays",
+    "difficulty": "easy",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_count_value(int *a, int n, int value)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "count",
+        "harness": "int main(void){int a[]={2,1,2,2,7};return(ft_count_value(a,5,2)!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E080",
+    "day": "Day 07",
+    "title": "ft_malloc_zero",
+    "description": "Allocate and zero an int array.",
+    "tag": "malloc",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\nint\t*ft_malloc_zero(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "zero",
+        "harness": "int main(void){int*r=ft_malloc_zero(4);if(!r)return(1);int ok=r[0]==0&&r[3]==0;free(r);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E081",
+    "day": "Day 08",
+    "title": "ft_list_new",
+    "description": "Create a linked-list node.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nt_list\t*ft_list_new(void *data)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "node",
+        "harness": "int main(void){int x=42;t_list*n=ft_list_new(&x);if(!n)return(1);int ok=n->data==&x&&n->next==0;free(n);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E082",
+    "day": "Day 08",
+    "title": "ft_list_size",
+    "description": "Return list length.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nint\tft_list_size(t_list *begin)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "three",
+        "harness": "int main(void){t_list a={0,0},b={0,&a},c={0,&b};return(ft_list_size(&c)!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E083",
+    "day": "Day 08",
+    "title": "ft_list_last",
+    "description": "Return last node.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nt_list\t*ft_list_last(t_list *begin)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "last",
+        "harness": "int main(void){t_list a={0,0},b={0,&a};return(ft_list_last(&b)!=&a);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E084",
+    "day": "Day 08",
+    "title": "ft_list_push_front",
+    "description": "Insert a node at the front.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nvoid\tft_list_push_front(t_list **begin, void *data)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "push",
+        "harness": "int main(void){t_list*a=0;int x=7;ft_list_push_front(&a,&x);return(!a||a->data!=&x||a->next!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E085",
+    "day": "Day 08",
+    "title": "ft_list_find",
+    "description": "Find first node whose data pointer equals target.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nt_list\t*ft_list_find(t_list *begin, void *target)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "find",
+        "harness": "int main(void){int x,y;t_list a={&x,0},b={&y,&a};return(ft_list_find(&b,&x)!=&a);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E086",
+    "day": "Day 08",
+    "title": "ft_list_reverse",
+    "description": "Reverse a linked list.",
+    "tag": "linked-list",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nvoid\tft_list_reverse(t_list **begin)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "reverse",
+        "harness": "int main(void){t_list a={0,0},b={0,&a};t_list*p=&b;ft_list_reverse(&p);return(p!=&a||a.next!=&b);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E087",
+    "day": "Day 08",
+    "title": "ft_list_clear",
+    "description": "Free all nodes in a list.",
+    "tag": "linked-list",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nvoid\tft_list_clear(t_list **begin)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "clear",
+        "harness": "int main(void){t_list a={0,0},b={0,&a};t_list*p=&b;ft_list_clear(&p);return(p!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E088",
+    "day": "Day 08",
+    "title": "ft_list_nth",
+    "description": "Return the nth node, or NULL.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nt_list\t*ft_list_nth(t_list *begin, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "nth",
+        "harness": "int main(void){t_list a={0,0},b={0,&a};return(ft_list_nth(&b,1)!=&a);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E089",
+    "day": "Day 08",
+    "title": "ft_list_count_match",
+    "description": "Count nodes whose data pointer equals target.",
+    "tag": "linked-list",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nint\tft_list_count_match(t_list *begin, void *target)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "count",
+        "harness": "int main(void){int x,y;t_list a={&x,0},b={&x,&a},c={&y,&b};return(ft_list_count_match(&c,&x)!=2);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E090",
+    "day": "Day 08",
+    "title": "ft_list_rotate",
+    "description": "Move the last node to the front.",
+    "tag": "linked-list",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\ntypedef struct s_list { void *data; struct s_list *next; } t_list;\n\nvoid\tft_list_rotate(t_list **begin)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "rotate",
+        "harness": "int main(void){int x=1,y=2;t_list a={&x,0},b={&y,&a};t_list*p=&b;ft_list_rotate(&p);return(p!=&a||a.next!=&b);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E091",
+    "day": "Day 09",
+    "title": "ft_split_spaces",
+    "description": "Split a string on spaces into a malloc'd array.",
+    "tag": "malloc/parsing",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t**ft_split_spaces(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E092",
+    "day": "Day 09",
+    "title": "ft_join_args",
+    "description": "Join argv[1..] with newlines into one malloc'd string.",
+    "tag": "malloc/parsing",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_join_args(int argc, char **argv)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E093",
+    "day": "Day 09",
+    "title": "ft_safe_strdup",
+    "description": "Duplicate NULL as NULL, otherwise duplicate normally.",
+    "tag": "malloc",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_safe_strdup(char *src)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "null",
+        "harness": "int main(void){return(ft_safe_strdup(0)!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E094",
+    "day": "Day 09",
+    "title": "ft_memset_int",
+    "description": "Fill n integers with value.",
+    "tag": "memory",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_memset_int(int *a, int n, int value)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "fill",
+        "harness": "int main(void){int a[3];ft_memset_int(a,3,7);return(a[0]!=7||a[2]!=7);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E095",
+    "day": "Day 09",
+    "title": "ft_memcpy_int",
+    "description": "Copy n integers from src to dest.",
+    "tag": "memory",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nvoid\tft_memcpy_int(int *dest, int *src, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "copy",
+        "harness": "int main(void){int a[3]={1,2,3},b[3]={0};ft_memcpy_int(b,a,3);return(b[0]!=1||b[2]!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E096",
+    "day": "Day 09",
+    "title": "ft_array_unique",
+    "description": "Return 1 if an int array has no duplicates.",
+    "tag": "arrays",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_array_unique(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "unique",
+        "harness": "int main(void){int a[]={1,4,7};return(ft_array_unique(a,3)!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E097",
+    "day": "Day 09",
+    "title": "ft_parse_csv_ints",
+    "description": "Parse simple comma-separated positive integers into out[].",
+    "tag": "parsing",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_parse_csv_ints(char *str, int *out, int max)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E098",
+    "day": "Day 09",
+    "title": "ft_line_count",
+    "description": "Count newline-separated lines.",
+    "tag": "parsing",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_line_count(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "lines",
+        "harness": "int main(void){return(ft_line_count(\"a\\nb\\nc\")!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E099",
+    "day": "Day 09",
+    "title": "ft_find_substring_count",
+    "description": "Count non-overlapping occurrences of a substring.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_find_substring_count(char *str, char *needle)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "count",
+        "harness": "int main(void){return(ft_find_substring_count(\"aaaa\",\"aa\")!=2);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E100",
+    "day": "Day 09",
+    "title": "ft_token_length",
+    "description": "Return length of the first whitespace-delimited token.",
+    "tag": "parsing",
+    "difficulty": "medium",
+    "nearExam": false,
+    "starter": "#include <unistd.h>\n\nint\tft_token_length(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "token",
+        "harness": "int main(void){return(ft_token_length(\"  hello pool\")!=5);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E101",
+    "day": "Day 10",
+    "title": "bug_hunt_off_by_one",
+    "description": "Fix an off-by-one bug in a loop that prints 1..n.",
+    "tag": "debugging",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tprint_1_to_n(int n)\n{\n\tint i = 1;\n\twhile (i < n)\n\t{\n\t\tchar c = i + '0';\n\t\twrite(1, &c, 1);\n\t\ti++;\n\t}\n}\n\nint main(void){print_1_to_n(5);return(0);}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E102",
+    "day": "Day 10",
+    "title": "bug_hunt_strlen",
+    "description": "Find and fix the incorrect strlen condition.",
+    "tag": "debugging",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tmy_strlen(char *s)\n{\n\tint i = 0;\n\twhile (s[i] != '\\\\0') i++;\n\treturn i;\n}\n\nint main(void){return(my_strlen(\"pool\")!=4);}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E103",
+    "day": "Day 10",
+    "title": "bug_hunt_swap",
+    "description": "Fix a swap that loses one value.",
+    "tag": "debugging",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tbad_swap(int *a, int *b)\n{\n\t/* fix the implementation */\n\tint tmp = *a;\n\t*a = *b;\n\t*b = tmp;\n}\n\nint main(void){int a=1,b=2;bad_swap(&a,&b);return(a==2&&b==1?0:1);}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E104",
+    "day": "Day 10",
+    "title": "edge_empty_string",
+    "description": "Return correct length for an empty string.",
+    "tag": "edge-cases",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_len_safe(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "empty",
+        "harness": "int main(void){return(ft_len_safe(\"\")!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E105",
+    "day": "Day 10",
+    "title": "edge_negative_range",
+    "description": "Handle min >= max without allocating.",
+    "tag": "edge-cases",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nint\t*ft_range_safe(int min, int max)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "empty range",
+        "harness": "int main(void){return(ft_range_safe(5,5)!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E106",
+    "day": "Day 10",
+    "title": "edge_null_search",
+    "description": "Search safely when either string may be NULL.",
+    "tag": "edge-cases",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_contains_safe(char *s, char *needle)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "null",
+        "harness": "int main(void){return(ft_contains_safe(0,\"x\")!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E107",
+    "day": "Day 10",
+    "title": "edge_zero_array",
+    "description": "Return 0 for an empty array.",
+    "tag": "edge-cases",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_sum_safe(int *a, int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "empty",
+        "harness": "int main(void){return(ft_sum_safe(0,0)!=0);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E108",
+    "day": "Day 10",
+    "title": "debug_integer_parser",
+    "description": "Fix a parser that accepts trailing garbage.",
+    "tag": "debugging",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tparse_positive(char *s)\n{\n\t/* TODO: return -1 when the text is not a pure positive integer */\n\treturn (0);\n}\n",
+    "tests": [
+      {
+        "name": "valid",
+        "harness": "int main(void){return(parse_positive(\"1337\")!=1337);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E109",
+    "day": "Day 10",
+    "title": "debug_duplicate_free",
+    "description": "Write a safe cleanup helper for two allocated strings.",
+    "tag": "memory",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nvoid\tfree_pair(char **a, char **b)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E110",
+    "day": "Day 10",
+    "title": "debug_bounds_copy",
+    "description": "Copy no more than capacity-1 chars and always NUL-terminate.",
+    "tag": "memory",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tcopy_bound(char *dst, int capacity, char *src)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "bounded",
+        "harness": "int main(void){char d[5];copy_bound(d,5,\"abcdef\");return(d[4]!=0||d[0]!='a');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E111",
+    "day": "Day 11",
+    "title": "ft_split_words",
+    "description": "Split on spaces/tabs/newlines.",
+    "tag": "parsing",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t**ft_split_words(char *str)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E112",
+    "day": "Day 11",
+    "title": "ft_strjoin",
+    "description": "Join two strings into freshly allocated memory.",
+    "tag": "malloc/strings",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_strjoin(char *a, char *b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "join",
+        "harness": "int main(void){char*s=ft_strjoin(\"pool\",\"er\");if(!s)return(1);int ok=s[0]=='p'&&s[4]=='e'&&s[6]==0;free(s);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E113",
+    "day": "Day 11",
+    "title": "ft_strtrim",
+    "description": "Return a new string without leading/trailing whitespace.",
+    "tag": "malloc/strings",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_strtrim(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E114",
+    "day": "Day 11",
+    "title": "ft_strreplace_char",
+    "description": "Return a newly allocated copy replacing one char.",
+    "tag": "malloc/strings",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_strreplace_char(char *s, char from, char to)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "replace",
+        "harness": "int main(void){char*s=ft_strreplace_char(\"pool\",'o','0');if(!s)return(1);int ok=s[1]=='0'&&s[2]=='0';free(s);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E115",
+    "day": "Day 11",
+    "title": "ft_itoa_small",
+    "description": "Convert a normal signed integer to a malloc'd string.",
+    "tag": "malloc/strings",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nchar\t*ft_itoa_small(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "42",
+        "harness": "int main(void){char*s=ft_itoa_small(-42);if(!s)return(1);int ok=s[0]=='-'&&s[1]=='4'&&s[2]=='2'&&s[3]==0;free(s);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E116",
+    "day": "Day 11",
+    "title": "ft_count_words",
+    "description": "Count whitespace-delimited words.",
+    "tag": "parsing",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_count_words(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "words",
+        "harness": "int main(void){return(ft_count_words(\" one\\ttwo three \")!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E117",
+    "day": "Day 11",
+    "title": "ft_is_anagram",
+    "description": "Return 1 if two lowercase strings are anagrams.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_is_anagram(char *a, char *b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "anagram",
+        "harness": "int main(void){return(ft_is_anagram(\"listen\",\"silent\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E118",
+    "day": "Day 11",
+    "title": "ft_str_contains_all",
+    "description": "Return 1 if every char in needle appears in haystack.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_str_contains_all(char *haystack, char *needle)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "contains",
+        "harness": "int main(void){return(ft_str_contains_all(\"abcdef\",\"ace\")!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E119",
+    "day": "Day 11",
+    "title": "ft_compact_spaces",
+    "description": "Replace runs of whitespace with one space in place.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tft_compact_spaces(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "compact",
+        "harness": "int main(void){char s[32]=\"a  b\\t c\";ft_compact_spaces(s);return(s[0]!='a'||s[1]!=' '||s[2]!='b');}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E120",
+    "day": "Day 11",
+    "title": "ft_reverse_words",
+    "description": "Reverse word order in a sentence.",
+    "tag": "strings",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tft_reverse_words(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E121",
+    "day": "Day 12",
+    "title": "exam_putchar",
+    "description": "Fast warmup: output one character.",
+    "tag": "exam",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tft_putchar(char c)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "X",
+        "harness": "int main(void){ft_putchar('X');return(0);}",
+        "expected": "X"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E122",
+    "day": "Day 12",
+    "title": "exam_strlen",
+    "description": "Fast warmup: implement strlen from memory.",
+    "tag": "exam",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_strlen(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "length",
+        "harness": "int main(void){return(ft_strlen(\"1337\")!=4);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E123",
+    "day": "Day 12",
+    "title": "exam_swap",
+    "description": "Fast pointer warmup.",
+    "tag": "exam/pointers",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tft_swap(int *a, int *b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "swap",
+        "harness": "int main(void){int a=3,b=8;ft_swap(&a,&b);return(a!=8||b!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E124",
+    "day": "Day 12",
+    "title": "exam_atoi",
+    "description": "Parse a signed integer quickly.",
+    "tag": "exam/parsing",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_atoi(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "parse",
+        "harness": "int main(void){return(ft_atoi(\"-1337\")!=-1337);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E125",
+    "day": "Day 12",
+    "title": "exam_putnbr",
+    "description": "Print a signed integer without printf.",
+    "tag": "exam/output",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nvoid\tft_putnbr(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "number",
+        "harness": "int main(void){ft_putnbr(-1337);return(0);}",
+        "expected": "-1337"
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E126",
+    "day": "Day 12",
+    "title": "exam_recursive_power",
+    "description": "Recursive power under time pressure.",
+    "tag": "exam/recursion",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_power(int n, int p)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "power",
+        "harness": "int main(void){return(ft_power(2,10)!=1024);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E127",
+    "day": "Day 12",
+    "title": "exam_is_prime",
+    "description": "Prime test under time pressure.",
+    "tag": "exam/math",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_is_prime(int n)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "prime",
+        "harness": "int main(void){return(ft_is_prime(101)!=1);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E128",
+    "day": "Day 12",
+    "title": "exam_strcmp",
+    "description": "String compare from memory.",
+    "tag": "exam/strings",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_strcmp(char *a, char *b)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "compare",
+        "harness": "int main(void){return(!(ft_strcmp(\"abc\",\"abd\")<0));}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E129",
+    "day": "Day 12",
+    "title": "exam_count_words",
+    "description": "Count words with separators.",
+    "tag": "exam/parsing",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint\tft_count_words(char *s)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "words",
+        "harness": "int main(void){return(ft_count_words(\"a b\\tc\")!=3);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E130",
+    "day": "Day 12",
+    "title": "exam_malloc_array",
+    "description": "Allocate an integer range and handle empty input.",
+    "tag": "exam/malloc",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\n\nint\t*ft_range(int min, int max)\n{\n\t/* TODO */\n}\n",
+    "tests": [
+      {
+        "name": "range",
+        "harness": "int main(void){int*r=ft_range(2,5);if(!r)return(1);int ok=r[0]==2&&r[2]==4;free(r);return(!ok);}",
+        "expected": ""
+      }
+    ],
+    "hint": "Break the problem into a tiny example first, then handle the edge cases."
+  },
+  {
+    "id": "E131",
+    "day": "Day 13",
+    "title": "mixed_pointer_string",
+    "description": "Combine pointer mutation with string scanning.",
+    "tag": "mixed/pointers",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nvoid mixed(char *s,int *count){ /* TODO */ }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E132",
+    "day": "Day 13",
+    "title": "mixed_parse_validate",
+    "description": "Parse an integer only if the complete token is valid.",
+    "tag": "mixed/parsing",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nint mixed_parse(char *s){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E133",
+    "day": "Day 13",
+    "title": "mixed_malloc_cleanup",
+    "description": "Allocate two resources and clean every failure path.",
+    "tag": "mixed/malloc",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\nchar *mixed_alloc(char *a,char *b){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E134",
+    "day": "Day 13",
+    "title": "mixed_list_search",
+    "description": "Traverse a list and return the first matching node.",
+    "tag": "mixed/list",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\ntypedef struct s_list{void*data;struct s_list*next;}t_list;\nt_list *mixed_find(t_list*b,void*d){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E135",
+    "day": "Day 13",
+    "title": "mixed_argv_sort",
+    "description": "Sort arguments and ignore argv[0].",
+    "tag": "mixed/argv",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nvoid mixed_sort(int argc,char **argv){ /* TODO */ }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E136",
+    "day": "Day 13",
+    "title": "mixed_recursive_string",
+    "description": "Solve a string property recursively.",
+    "tag": "mixed/recursion",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nint mixed_recursive(char *s){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E137",
+    "day": "Day 13",
+    "title": "mixed_debug_session",
+    "description": "Repair a deliberately awkward implementation with multiple small bugs.",
+    "tag": "debugging",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nint mixed_bug(char *s){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E138",
+    "day": "Day 13",
+    "title": "mixed_time_box",
+    "description": "Solve a compact task under a 10-minute time box.",
+    "tag": "exam/mixed",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nint mixed_timebox(int *a,int n){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E139",
+    "day": "Day 13",
+    "title": "mixed_memory_audit",
+    "description": "Implement a helper and document ownership through cleanup.",
+    "tag": "memory",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <stdlib.h>\nchar *mixed_owned_copy(char *s){ /* TODO */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  },
+  {
+    "id": "E140",
+    "day": "Day 13",
+    "title": "final_boss",
+    "description": "Final Pool-style mixed challenge: choose the right C pattern quickly.",
+    "tag": "boss",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\nint main(void){ /* read the prompt and build your solution */ return(0); }",
+    "tests": [],
+    "hint": "Treat this like an exam: get a compiling skeleton first, then close the edge cases."
+  }
+];
+window.POOLER_EXAM_DRILLS = [
+  {
+    "id": "X01",
+    "day": "EXAM",
+    "title": "Warmup Sprint",
+    "description": "5-minute fundamentals: output, loops, conditions.",
+    "tag": "warmup",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X02",
+    "day": "EXAM",
+    "title": "Pointer Sprint",
+    "description": "Swap, div/mod and one pointer edge case.",
+    "tag": "pointers",
+    "difficulty": "easy",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X03",
+    "day": "EXAM",
+    "title": "String Sprint",
+    "description": "strlen, strcmp and character scanning.",
+    "tag": "strings",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X04",
+    "day": "EXAM",
+    "title": "Parser Sprint",
+    "description": "Whitespace, signs and integer parsing.",
+    "tag": "parsing",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X05",
+    "day": "EXAM",
+    "title": "Recursion Sprint",
+    "description": "Factorial, power or Fibonacci under time pressure.",
+    "tag": "recursion",
+    "difficulty": "medium",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X06",
+    "day": "EXAM",
+    "title": "Math Sprint",
+    "description": "Prime, sqrt, gcd/lcm and boundary cases.",
+    "tag": "math",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X07",
+    "day": "EXAM",
+    "title": "Argv Sprint",
+    "description": "argc/argv scanning and sorting.",
+    "tag": "argc/argv",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X08",
+    "day": "EXAM",
+    "title": "Malloc Sprint",
+    "description": "Range, strdup and failure paths.",
+    "tag": "malloc",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X09",
+    "day": "EXAM",
+    "title": "Linked List Sprint",
+    "description": "Build, traverse and mutate a small list.",
+    "tag": "linked-list",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X10",
+    "day": "EXAM",
+    "title": "Debug Sprint",
+    "description": "Find the bug before changing the design.",
+    "tag": "debugging",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X11",
+    "day": "EXAM",
+    "title": "Mixed Drill A",
+    "description": "Three mixed exercises, 25 minutes.",
+    "tag": "mixed",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X12",
+    "day": "EXAM",
+    "title": "Mixed Drill B",
+    "description": "Four short tasks, 30 minutes.",
+    "tag": "mixed",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X13",
+    "day": "EXAM",
+    "title": "Exam Boss",
+    "description": "One longer task plus two edge-case checks.",
+    "tag": "boss",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  },
+  {
+    "id": "X14",
+    "day": "EXAM",
+    "title": "Full Mock",
+    "description": "Full local mock: 60 minutes, mixed skills.",
+    "tag": "full-mock",
+    "difficulty": "hard",
+    "nearExam": true,
+    "starter": "#include <unistd.h>\n\nint main(void)\n{\n\t/* Choose the task from the prompt and start here. */\n\treturn (0);\n}",
+    "tests": []
+  }
+];
+window.POOLER_CONCEPTS = [
+  [
+    "Pointers",
+    "A pointer stores an address. Separate the value, address and dereferenced value in your head."
+  ],
+  [
+    "Arrays vs pointers",
+    "An array owns storage; a pointer refers to storage. Decay is useful, but not the same thing."
+  ],
+  [
+    "Strings",
+    "C strings are char sequences terminated by '\\0'. Always know where the terminator lives."
+  ],
+  [
+    "argc / argv",
+    "argc counts arguments; argv is an array of pointers to argument strings."
+  ],
+  [
+    "malloc / free",
+    "Allocation creates ownership. Every successful malloc needs a clear cleanup path."
+  ],
+  [
+    "Recursion",
+    "Define a base case first. Then make the recursive step strictly move toward it."
+  ],
+  [
+    "Integer overflow",
+    "Check ranges before multiplying or adding when inputs can grow."
+  ],
+  [
+    "Linked lists",
+    "Traversal is pointer movement. Mutation is about reconnecting nodes without losing the rest of the chain."
+  ],
+  [
+    "Debugging",
+    "Reproduce, isolate, inspect, fix, retest. Random edits are not a debugging strategy."
+  ],
+  [
+    "Compiler warnings",
+    "Treat -Wall -Wextra as feedback, not decoration."
+  ],
+  [
+    "Time pressure",
+    "On exams, get a compiling skeleton early, then handle edge cases."
+  ],
+  [
+    "Memory ownership",
+    "For every pointer, know who allocates it, who uses it, and who frees it."
+  ]
+];
+window.POOLER_TOOLS = [
+  [
+    "Compile",
+    "cc -Wall -Wextra -Werror main.c",
+    "Use warnings as a fast correctness filter."
+  ],
+  [
+    "Run",
+    "./a.out",
+    "Run the smallest useful case first."
+  ],
+  [
+    "Pipe",
+    "echo '42' | ./a.out",
+    "Create repeatable input without typing it every time."
+  ],
+  [
+    "Arguments",
+    "./a.out hello world",
+    "Practice argc/argv with real argument layouts."
+  ],
+  [
+    "Git status",
+    "git status",
+    "Know what changed before you submit."
+  ],
+  [
+    "Git diff",
+    "git diff",
+    "Review the exact patch, not your memory of it."
+  ],
+  [
+    "Make",
+    "make && make clean",
+    "Keep multi-file builds reproducible."
+  ],
+  [
+    "Leaks",
+    "valgrind --leak-check=full ./a.out",
+    "When available, use it to inspect ownership mistakes."
+  ],
+  [
+    "Debug",
+    "gdb ./a.out",
+    "Break, inspect, step; don't guess."
+  ],
+  [
+    "Sanitizer",
+    "cc -fsanitize=address,undefined ...",
+    "Great for catching invalid memory access locally."
+  ]
+];
+window.POOLER_ACHIEVEMENTS = [
+  [
+    "FIRST BLOOD",
+    "Solve your first exercise.",
+    "solve1"
+  ],
+  [
+    "TEN DEEP",
+    "Solve 10 exercises.",
+    "solve10"
+  ],
+  [
+    "DAY BREAKER",
+    "Complete a full day.",
+    "day"
+  ],
+  [
+    "EXAM READY",
+    "Open 5 exam drills.",
+    "exam5"
+  ],
+  [
+    "STREAK 7",
+    "Reach a 7-day streak.",
+    "streak7"
+  ],
+  [
+    "NO FEAR",
+    "Run code 20 times.",
+    "runs20"
+  ]
+];
+
+
+/* Functional audit: every training drill gets an executable validation path. */
+(() => {
+  const T = {
+    E061: [{name:"prints argv", harness:`int main(void){char *av[]={(char *)\"prog\",(char *)\"alpha\",(char *)\"beta\",0}; ft_print_args(3,av); return 0;}`, expected:"alpha\nbeta\n"}],
+    E070: [{name:"indexed argv", harness:`int main(void){char *av[]={(char *)\"prog\",(char *)\"alpha\",(char *)\"beta\",0}; ft_print_env_like(3,av); return 0;}`, expected_contains:["alpha","beta"]}],
+    E091: [{name:"split spaces", harness:`int main(void){char **p=ft_split_spaces((char *)\"one two three\"); if(!p||!p[0]||!p[1]||!p[2]||p[3]) return 1; int ok=!strcmp(p[0],\"one\")&&!strcmp(p[1],\"two\")&&!strcmp(p[2],\"three\"); for(int i=0;p[i];i++) free(p[i]); free(p); return !ok;}`, expected:""}],
+    E092: [{name:"join args", harness:`int main(void){char *av[]={(char *)\"prog\",(char *)\"one\",(char *)\"two\",0}; char *s=ft_join_args(3,av); if(!s)return 1; int ok=!strcmp(s,\"one\\ntwo\\n\")||!strcmp(s,\"one\\ntwo\"); free(s); return !ok;}`, expected:""}],
+    E097: [{name:"csv parse", harness:`int main(void){int a[4]={0}; int n=ft_parse_csv_ints((char *)\"12,34,56\",a,4); return n!=3||a[0]!=12||a[1]!=34||a[2]!=56;}`, expected:""}],
+    E101: [{name:"1 to n", program:true, expected:"12345"}],
+    E102: [{name:"strlen", program:true}],
+    E103: [{name:"swap", program:true}],
+    E109: [{name:"cleanup pair", harness:`int main(void){char *a=malloc(8),*b=malloc(8); if(!a||!b)return 1; free_pair(&a,&b); return 0;}`, expected:""}],
+    E111: [{name:"split whitespace", harness:`int main(void){char **p=ft_split_words((char *)\" one\\ttwo\\nthree \"); if(!p||!p[0]||!p[1]||!p[2]||p[3])return 1; int ok=!strcmp(p[0],\"one\")&&!strcmp(p[1],\"two\")&&!strcmp(p[2],\"three\"); for(int i=0;p[i];i++)free(p[i]);free(p);return !ok;}`, expected:""}],
+    E113: [{name:"trim", harness:`int main(void){char *p=ft_strtrim((char *)\"  pooler  "); if(!p)return 1; int ok=!strcmp(p,\"pooler\");free(p);return !ok;}`, expected:""}],
+    E120: [{name:"reverse words", harness:`int main(void){char s[32]=\"one two three\";ft_reverse_words(s);return strcmp(s,\"three two one\");}`, expected:""}],
+    E131: [{name:"pointer string", harness:`int main(void){char s[32]=\"abcde\";int n=0;mixed(s,&n);return n!=5||strcmp(s,\"abcde\");}`, expected:""}],
+    E132: [{name:"complete integer", harness:`int main(void){return mixed_parse((char *)\"-123\")!=-123||mixed_parse((char *)\"12x\")!=0;}`, expected:""}],
+    E133: [{name:"owned copy", harness:`int main(void){char *p=mixed_alloc((char *)\"one\",(char *)\"two\");if(!p)return 1;int ok=!strcmp(p,\"one\");free(p);return !ok;}`, expected:""}],
+    E134: [{name:"list search", harness:`int main(void){t_list a,b; int x=1,y=2; a.data=&x;a.next=&b;b.data=&y;b.next=0;return mixed_find(&a,&y)!=&b;}`, expected:""}],
+    E135: [{name:"argv sort", harness:`int main(void){char a0[] = \"prog\",a1[] = \"z\",a2[] = \"a\",a3[] = \"m\";char *av[]={a0,a1,a2,a3,0};mixed_sort(4,av);return strcmp(av[1],\"a\")||strcmp(av[2],\"m\")||strcmp(av[3],\"z\");}`, expected:""}],
+    E136: [{name:"recursive property", harness:`int main(void){return mixed_recursive((char *)\"level\")!=1||mixed_recursive((char *)\"abc\")!=0;}`, expected:""}],
+    E137: [{name:"debug repair", harness:`int main(void){return mixed_bug((char *)\"pooler\")!=6;}`, expected:""}],
+    E138: [{name:"array result", harness:`int main(void){int a[]={1,2,3,4,5};return mixed_timebox(a,5)!=15;}`, expected:""}],
+    E139: [{name:"owned copy", harness:`int main(void){char *p=mixed_owned_copy((char *)\"pooler\");if(!p)return 1;int ok=!strcmp(p,\"pooler\");free(p);return !ok;}`, expected:""}],
+    E140: [{name:"final boss compile", program:true}]
+  };
+  for (const [id, tests] of Object.entries(T)) { const x=window.POOLER_EXERCISES.find(e=>e.id===id); if(x)x.tests=tests; }
+})();

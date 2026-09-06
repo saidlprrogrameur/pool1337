@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0d1510">
+<title>POOLER — C Pool Companion</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="mobile-overlay" id="mobileOverlay"></div>
+<div class="app-shell">
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark"><span>&lt;/&gt;</span><b>1337</b></div>
+      <div class="brand-copy"><strong>POOLER</strong><small>CODE YOUR WAY UP</small></div>
+    </div>
+
+    <div class="side-section">
+      <span class="side-label">WORKSPACE</span>
+      <nav>
+        <button class="nav-item active" data-view="dashboard"><span>⌂</span><b>Dashboard</b></button>
+        <button class="nav-item" data-view="training"><span>▦</span><b>Training</b></button>
+        <button class="nav-item" data-view="lab"><span>&lt;/&gt;</span><b>Code Lab</b></button>
+        <button class="nav-item" data-view="exams"><span>◈</span><b>Exam Room</b></button>
+      </nav>
+    </div>
+    <div class="side-section">
+      <span class="side-label">LEARN</span>
+      <nav>
+        <button class="nav-item" data-view="roadmap"><span>⌁</span><b>Roadmap</b></button>
+        <button class="nav-item" data-view="concepts"><span>✦</span><b>Concepts</b></button>
+        <button class="nav-item" data-view="lessons"><span>📚</span><b>Lessons</b></button>
+        <button class="nav-item" data-view="tools"><span>⚙</span><b>Pool Tools</b></button>
+      </nav>
+    </div>
+    <div class="side-section">
+      <span class="side-label">COMMUNITY</span>
+      <nav>
+        <button class="nav-item" data-view="leaderboard"><span>♛</span><b>Leaderboard</b></button>
+        <button class="nav-item" data-view="profile"><span>◎</span><b>Profile</b></button>
+        <button class="nav-item" data-view="stats"><span>◒</span><b>Analytics</b></button>
+        <button class="nav-item hidden" data-view="admin" id="adminNav"><span>⚡</span><b>Admin Console</b></button>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <button class="profile-mini" id="openProfile">
+        <span class="avatar" id="avatar">L</span>
+        <span><b id="sideName">Learner</b><small>POOLER learner</small></span>
+        <i>›</i>
+      </button>
+      <div class="side-controls">
+        <button id="langBtn">EN</button>
+        <button id="themeBtn" title="Switch theme">◐</button>
+      </div>
+    </div>
+  </aside>
+
+  <main class="main">
+    <header class="topbar">
+      <button class="mobile-menu" id="mobileMenu">☰</button>
+      <div class="crumb"><span>POOLER</span><i>/</i><strong id="viewTitle">Dashboard</strong></div>
+      <div class="top-search"><span>⌕</span><input id="globalSearch" autocomplete="off" placeholder="Search exercises, concepts, or users…"><kbd>Ctrl K</kbd><div id="globalResults" class="global-results"></div></div>
+      <div class="top-right">
+        <button class="icon-btn" id="notifyBtn" title="Notifications">♧</button>
+        <span class="online"><i></i> local workspace</span>
+        <button class="icon-btn" id="focusBtn" title="Focus mode">◷</button>
+      </div>
+    </header>
+
+    <div class="content">
+      <section class="view active" id="view-dashboard">
+        <div class="shot-hero">
+          <div class="shot-welcome">
+            <span class="eyebrow">GOOD CODE · BETTER YOU</span>
+            <div class="welcome-row"><div><div class="welcome-label">Welcome back,</div><h1><span id="heroName">Learner</span> <span class="wave">👋</span></h1><p>Keep pushing. Consistency beats talent.</p></div></div>
+          </div>
+          <div class="quote"><span>“Discipline turns problems<br>into progress.”</span><b>— POOLER</b></div>
+          <div class="level-card">
+            <div><span>LEVEL <b id="mLevel">1</b></span><div class="xp-line"><i id="levelBar"></i></div><small><span id="mXP">0</span> / <span id="levelNext">500</span> XP</small></div>
+            <div class="level-ring"><b id="mLevelRing">1</b></div>
+          </div>
+        </div>
+
+        <div class="shot-stats">
+          <article class="shot-stat purple"><div class="stat-icon">&lt;/&gt;</div><div><span>Solved</span><strong id="mSolved">0</strong><small>+ this week</small></div></article>
+          <article class="shot-stat blue"><div class="stat-icon">▥</div><div><span>Runs</span><strong id="mRuns">0</strong><small>Keep going!</small></div></article>
+          <article class="shot-stat green"><div class="stat-icon">♨</div><div><span>Streak</span><strong id="mStreak">0</strong><small>Best: <span id="mBest">0</span></small></div></article>
+          <article class="shot-stat amber"><div class="stat-icon">☆</div><div><span>Rank</span><strong id="mRank">—</strong><small>In community</small></div></article>
+        </div>
+
+        <div class="shot-main-grid">
+          <article class="shot-card leaderboard-card">
+            <div class="shot-card-head"><div><span class="card-kicker">🏆 COMMUNITY</span><h2>Leaderboard</h2><p>Top learners in the community</p></div><button class="shot-outline" data-jump="leaderboard">View all →</button></div>
+            <div class="lb-head"><span>#</span><span>User</span><span>Level</span><span>XP</span><span>Solved</span><span>Streak</span></div>
+            <div id="dashLeaderboard" class="dash-leaderboard"><div class="dash-empty">Sign in to see live community rankings.</div></div>
+          </article>
+
+          <div class="shot-side">
+            <article class="shot-card progress-card">
+              <div class="shot-card-head"><div><span class="card-kicker">↗ PROGRESS</span><h2>Your Progress</h2></div><button class="shot-outline" data-jump="profile">View Profile →</button></div>
+              <div class="progress-level"><b>Level <span id="sideLevel">1</span></b><span id="progressXP">0 / 500 XP</span></div><div class="big-progress"><i id="dashProgressBar"></i></div><small id="dashProgressPct">0%</small>
+              <p>“Discipline turns problems into progress.”</p>
+            </article>
+            <article class="shot-card quick-card">
+              <div class="shot-card-head"><div><span class="card-kicker">⚡ ACTION</span><h2>Quick Actions</h2></div></div>
+              <div class="quick-grid">
+                <button class="quick-tile q-purple" id="continueBtn"><span>&lt;/&gt;</span><b>Start Training</b><small>Solve exercises →</small></button>
+                <button class="quick-tile q-green" id="openLabDash"><span>›_</span><b>Open Code Lab</b><small>Write & test code →</small></button>
+                <button class="quick-tile q-blue" data-jump="roadmap"><span>▤</span><b>Check Roadmap</b><small>Plan your learning →</small></button>
+                <button class="quick-tile q-amber" data-jump="leaderboard"><span>♟</span><b>Community</b><small>See & learn →</small></button>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="shot-focus"><div class="focus-icon">◉</div><div><span>Today's Focus</span><h2>Solve. Learn. Improve. Repeat.</h2><small>“A better you is a more dangerous you.”</small></div><button class="primary big" id="focusStartDash">Start Now →</button></div>
+
+        <div class="hidden legacy-dashboard-hooks">
+          <span id="heroSolved">0</span><span id="mTotal">0</span><span id="missionTag">DAY 00</span><span id="missionTitle"></span><span id="missionDesc"></span><span id="missionBar"></span><span id="missionMeta"></span><button id="missionBtn"></button><div id="roadStrip"></div><div id="achievementStrip"></div><button id="randomBtn"></button><button id="randomBtn2"></button><button id="bugHuntBtn"></button><button id="speedBtn"></button><button id="bossBtn"></button>
+        </div>
+      </section>
+
+      <section class="view" id="view-training">
+        <div class="page-intro split">
+          <div><span class="eyebrow">140 TRAINING DRILLS</span><h1>Training</h1><p>Pool-style practice from first write() calls to malloc, lists, parsing and exam pressure.</p></div>
+          <div class="search-box"><span>⌕</span><input id="exerciseSearch" placeholder="Search title, skill, day…"></div>
+        </div>
+        <div class="training-toolbar">
+          <div id="dayFilters" class="filters"></div>
+          <div class="sort-controls"><button class="filter active" data-sort="default">Default</button><button class="filter" data-sort="hard">Hard first</button><button class="filter" data-sort="unsolved">Unsolved</button></div>
+        </div>
+        <div class="training-layout">
+          <div class="exercise-list" id="exerciseList"></div>
+          <aside class="exercise-detail" id="exerciseDetail"></aside>
+        </div>
+      </section>
+
+      <section class="view" id="view-lab">
+        <div class="page-intro split lab-heading">
+          <div><span class="eyebrow">LOCAL C WORKBENCH</span><h1>Code Lab</h1><p>Real compile + run + tests. Function exercises get an automatic harness; full-program tasks run as written.</p></div>
+          <div class="editor-actions"><span class="mock-timer hidden" id="mockTimer" aria-live="polite">MOCK 60:00</span>
+            <button class="ghost" id="loadStarter">Starter</button>
+            <button class="ghost" id="clearCode">Clear</button>
+            <button class="ghost" id="copyCode">Copy</button>
+            <button class="primary" id="runCode">Run <kbd>Ctrl↵</kbd></button>
+          </div>
+        </div>
+        <div class="lab-layout">
+          <div class="editor-card">
+            <div class="editor-top"><div class="traffic"><i></i><i></i><i></i></div><span id="fileName">main.c</span><span class="editor-lang">C99</span></div>
+            <div class="editor-body">
+              <div class="line-numbers" id="lineNumbers"></div>
+              <pre class="highlight" id="highlight"><code></code></pre>
+              <textarea id="codeEditor" spellcheck="false" aria-label="C editor"></textarea>
+            </div>
+            <div class="editor-bottom"><span id="cursorPos">Ln 1, Col 1</span><span>UTF-8</span><span>cc · -Wall -Wextra</span></div>
+          </div>
+          <div class="output-card">
+            <div class="lab-tabs">
+              <button class="lab-tab active" data-output="console">Console</button>
+              <button class="lab-tab" data-output="tests">Tests <span id="testCount">0</span></button>
+              <button class="lab-tab" data-output="hint">Hint</button>
+            </div>
+            <div class="lab-panel" id="outputConsole">$ Ready. Pick a drill or write your own C.</div>
+            <div class="lab-panel hidden" id="outputTests"></div>
+            <div class="lab-panel hidden" id="outputHint"></div>
+          </div>
+        </div>
+        <div class="lab-bottom-grid">
+          <article class="panel"><span class="eyebrow">CURRENT TASK</span><h3 id="labTaskTitle">No exercise selected</h3><p id="labTaskDesc">Open Training and choose a drill.</p></article>
+          <article class="panel"><span class="eyebrow">KEYS</span><div class="key-list"><kbd>Tab</kbd><span>indent</span><kbd>Ctrl ↵</kbd><span>run</span><kbd>Ctrl S</kbd><span>save locally</span></div></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-exams">
+        <div class="page-intro"><span class="eyebrow">PRESSURE TRAINING</span><h1>Exam Room</h1><p>Timed local drills designed to build speed, memory and edge-case discipline. Not official 1337 exam papers.</p></div>
+        <div class="exam-banner"><div><span class="eyebrow">BOSS MODE</span><h2>Can you stay calm when the clock moves?</h2><p>Use the short drills first. Finish with the 60-minute Full Mock.</p></div><button class="primary big" id="startMock">Start Full Mock →</button></div>
+        <div class="exam-grid" id="examGrid"></div>
+      </section>
+
+      <section class="view" id="view-roadmap">
+        <div class="page-intro"><span class="eyebrow">14 DAYS · 10 DRILLS EACH</span><h1>Roadmap</h1><p>Each day has a skill focus and a deliberate difficulty ramp. You can jump around, but the order is designed to reduce blind spots.</p></div>
+        <div class="day-grid" id="dayGrid"></div>
+      </section>
+
+      <section class="view" id="view-concepts">
+        <div class="page-intro"><span class="eyebrow">MENTAL MODELS</span><h1>Concepts</h1><p>Short reminders for ideas that matter repeatedly during a Pool.</p></div>
+        <div class="concept-grid" id="conceptGrid"></div>
+      </section>
+
+      <section class="view" id="view-lessons">
+        <div class="page-intro split">
+          <div><span class="eyebrow">LEARN C · STEP BY STEP</span><h1>Lessons</h1><p>Short practical lessons to understand the concepts behind the Pool exercises. Read, practice, then apply it in Code Lab.</p></div>
+          <div class="search-box"><span>⌕</span><input id="lessonSearch" placeholder="Search lessons…"></div>
+        </div>
+        <div class="lesson-layout">
+          <div class="lesson-list" id="lessonList"></div>
+          <article class="lesson-detail panel" id="lessonDetail"><div class="empty-state"><span>📚</span><h3>Select a lesson</h3><p>Choose a lesson to see the explanation, example and practice.</p></div></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-tools">
+        <div class="page-intro"><span class="eyebrow">REFERENCE</span><h1>Pool Tools</h1><p>Keep the useful terminal habits one click away.</p></div>
+        <div class="tool-grid" id="toolGrid"></div>
+      </section>
+
+      <section class="view" id="view-leaderboard">
+        <div class="page-intro split"><div><span class="eyebrow">POOLER COMMUNITY</span><h1>Leaderboard</h1><p>Live community progress. Profiles sync automatically; no fake users and no claim of official 1337 ranking.</p></div><button class="ghost" id="refreshLeaderboard">Refresh</button></div>
+        <div class="leader-layout">
+          <article class="leader-card"><div class="panel-head"><div><span class="eyebrow">TOP PLAYERS</span><h2>Community ranking</h2></div><span id="leaderStatus">loading…</span></div><div id="leaderRows"></div></article>
+          <article class="leader-card"><div class="panel-head"><div><span class="eyebrow">YOUR PROFILE</span><h2>Live profile</h2></div></div><div class="leader-me" id="leaderMe"></div><p class="fine">Your profile syncs automatically when your progress changes.</p></article>
+        </div>
+      </section>
+
+      <section class="view" id="view-admin">
+        <div class="page-intro split"><div><span class="eyebrow">PRIVATE CONTROL ROOM</span><h1>Admin Console</h1><p>Manage real POOLER accounts, progress, roles and moderation data.</p></div><button class="ghost" id="refreshAdmin">Refresh</button></div>
+        <div class="profile-grid" id="adminStats"></div>
+        <article class="panel" style="margin-top:16px"><div class="panel-head"><div><span class="eyebrow">ACCOUNTS</span><h2>User management</h2></div><span id="adminStatus">Loading…</span></div><div id="adminUsers" style="overflow:auto"></div></article>
+      </section>
+
+      <section class="view" id="view-profile">
+        <div class="profile-hero panel">
+          <div class="profile-avatar-wrap"><span class="avatar profile-avatar" id="profileAvatar">L</span><span class="profile-online-dot"></span></div>
+          <div class="profile-identity"><span class="eyebrow">YOUR PROFILE</span><h1 id="profileNameView">Learner</h1><p id="profileBioView">Build skill, not noise.</p><div class="profile-chips"><span class="pill" id="profileSolvedChip">0 solved</span><span class="pill" id="profileStreakChip">0 day streak</span></div></div>
+          <div class="account-actions"><span class="account-status" id="accountStatus">Not signed in</span><button class="ghost" id="loginBtn">Log in</button><button class="primary" id="registerBtn">Create account</button><button class="ghost hidden" id="logoutBtn">Log out</button><button class="primary" id="profileEditBtn">Edit profile</button></div>
+        </div>
+        <div class="profile-grid">
+          <article class="panel profile-stat"><span class="eyebrow">SOLVED</span><strong id="profileSolvedView">0</strong><small>training drills</small></article>
+          <article class="panel profile-stat"><span class="eyebrow">RUNS</span><strong id="profileRunsView">0</strong><small>code executions</small></article>
+          <article class="panel profile-stat"><span class="eyebrow">BEST STREAK</span><strong id="profileBestView">0</strong><small>days</small></article>
+          <article class="panel profile-stat"><span class="eyebrow">PROGRESS</span><strong id="profileProgressView">0%</strong><small>roadmap complete</small></article>
+        </div>
+        <div class="profile-lower">
+          <article class="panel profile-achievements"><div class="panel-head"><div><span class="eyebrow">ACHIEVEMENTS</span><h2>Your badges</h2></div></div><div id="profileBadgeGrid"></div></article>
+          <article class="panel profile-tip"><span class="eyebrow">POOLER TIP</span><h2>Consistency beats brute force.</h2><p>حل تمرين صغير كل نهار، رجع للكود ديالك، وفهم علاش خدم. الهدف هو تولّي الأنماط ديال C أوتوماتيكية عندك.</p><button class="ghost" id="profileTrainBtn">Back to training →</button></article>
+        </div>
+        <div class="account-panel panel" id="accountPanel">
+          <div><span class="eyebrow">PERSISTENT ACCOUNT</span><h2>Keep your progress forever</h2><p id="accountHint">Create an account so your profile, solved exercises and streak stay on the community leaderboard after a restart or redeploy.</p></div>
+          <div class="account-panel-actions"><button class="primary" id="accountCreateBtn">Create account</button><button class="ghost" id="accountLoginBtn">Log in</button></div>
+        </div>
+      </section>
+
+      <section class="view" id="view-stats">
+        <div class="page-intro"><span class="eyebrow">YOUR DATA</span><h1>Analytics</h1><p>See where you spend your time and where the gaps are.</p></div>
+        <div class="analytics-grid">
+          <article class="panel large-panel"><div class="panel-head"><div><span class="eyebrow">ROADMAP</span><h2>Completion</h2></div><strong id="completionPct">0%</strong></div><div class="big-progress"><i id="completionBar"></i></div><div class="day-mini-grid" id="dayMini"></div></article>
+          <article class="panel"><div class="panel-head"><div><span class="eyebrow">PROFILE</span><h2 id="statsName">Learner</h2></div><button class="text-btn" id="editProfile">Edit</button></div><div class="profile-block"><span class="avatar large" id="statsAvatar">L</span><div><b id="statsBio">Build skill, not noise.</b><small>POOLER learner</small></div></div><div class="stat-rows"><div><span>Best streak</span><b id="bestStreak">0</b></div><div><span>Exercises solved</span><b id="statsSolved">0</b></div><div><span>Runs</span><b id="statsRuns">0</b></div><div><span>Exam drills opened</span><b id="drillsOpened">0</b></div></div></article>
+        </div>
+      </section>
+    </div>
+  </main>
+</div>
+
+<div class="onboarding-backdrop" id="onboardingModal" aria-hidden="true">
+  <div class="onboarding-card" role="dialog" aria-modal="true" aria-labelledby="onboardingTitle">
+    <div class="onboarding-top"><span class="eyebrow" id="onboardingStepLabel">WELCOME · 1 / 7</span><button class="modal-x" id="skipOnboarding" type="button">×</button></div>
+    <div class="onboarding-progress"><span id="onboardingProgress"></span></div>
+    <div class="onboarding-icon" id="onboardingIcon">✦</div>
+    <h2 id="onboardingTitle">Welcome to POOLER</h2>
+    <p id="onboardingText">Your guided C Pool companion.</p>
+    <div class="onboarding-points" id="onboardingPoints"></div>
+    <div class="onboarding-actions"><button class="ghost" id="onboardingBack" type="button">Back</button><button class="primary" id="onboardingNext" type="button">Show me →</button></div>
+    <button class="onboarding-skip" id="onboardingSkipText" type="button">Skip tour</button>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="authModal">
+  <div class="modal auth-modal">
+    <button class="modal-x" id="closeAuth">×</button>
+    <span class="eyebrow" id="authEyebrow">ACCOUNT</span>
+    <h2 id="authTitle">Create your POOLER account</h2>
+    <p class="modal-sub" id="authSubtitle">Your account keeps progress and leaderboard data persistent.</p>
+    <div class="auth-switch"><button class="auth-tab active" id="authRegisterTab">Create account</button><button class="auth-tab" id="authLoginTab">Log in</button></div>
+    <label>Username<input id="authUsername" maxlength="24" autocomplete="username" placeholder="e.g. youssef"></label>
+    <label id="authNameWrap">Display name<input id="authName" maxlength="24" placeholder="Your name"></label>
+    <label>Password<input id="authPassword" type="password" minlength="8" autocomplete="new-password" placeholder="At least 8 characters"></label>
+    <div class="auth-error" id="authError"></div>
+    <div class="modal-actions"><button class="ghost" id="cancelAuth">Cancel</button><button class="primary" id="submitAuth">Create account</button></div>
+  </div>
+</div>
+
+<div class="modal-backdrop" id="profileModal">
+  <div class="modal">
+    <button class="modal-x" id="closeProfile">×</button>
+    <span class="eyebrow">PROFILE</span><h2>Make POOLER yours.</h2>
+    <div class="profile-upload"><div class="profile-upload-preview" id="profileUploadPreview">L</div><div><b>Profile picture</b><small>JPG, PNG or WebP · max 5 MB</small><input id="profileFile" type="file" accept="image/jpeg,image/png,image/webp" hidden><button class="ghost" id="changeAvatarBtn" type="button">Choose photo</button></div></div>
+    <label>Name<input id="profileName" maxlength="24" placeholder="Your name"></label>
+    <label>Bio<input id="profileBio" maxlength="60" placeholder="e.g. Day 07 · pointers"></label>
+    <div class="modal-actions"><button class="ghost" id="cancelProfile">Cancel</button><button class="primary" id="saveProfile">Save</button></div>
+  </div>
+</div>
+
+<div class="focus-overlay" id="focusOverlay">
+  <div class="focus-inner"><span class="eyebrow">FOCUS MODE</span><h2>One drill. Zero noise.</h2><div class="focus-timer" id="focusTimer">25:00</div><button class="primary big" id="focusStart">Start 25:00</button><button class="text-btn" id="focusClose">Exit</button></div>
+</div>
+
+<div class="toast-stack" id="toastStack"></div>
+
+<script src="pooler-data.js"></script>
+<script src="app.js"></script>
+
+<footer class="site-footer">
+  <div class="footer-brand">POOLER</div>
+  <div class="footer-credit">Built with passion for the Piscine · © 2026 <strong>Youssef Said</strong> · <a href="https://instagram.com/youssfesii" target="_blank" rel="noopener noreferrer">@youssfesii</a></div>
+</footer>
+
+</body>
+</html>
