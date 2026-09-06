@@ -16,7 +16,7 @@
   <aside class="sidebar" id="sidebar">
     <div class="brand">
       <div class="brand-mark"><span>&lt;/&gt;</span><b>1337</b></div>
-      <div class="brand-copy"><strong>POOLER</strong><small>CODE YOUR WAY UP</small></div>
+      <div class="brand-copy"><strong>POOLER</strong><small>CODE YOUR WAY UP</small><span class="beta-badge">BETA · STILL WORKING</span></div>
     </div>
 
     <div class="side-section">
@@ -29,7 +29,7 @@
       </nav>
     </div>
     <div class="side-section">
-      <span class="side-label">LEARN</span>
+      <button class="side-label side-label-button" data-view="learn">LEARN</button>
       <nav>
         <button class="nav-item" data-view="roadmap"><span>⌁</span><b>Roadmap</b></button>
         <button class="nav-item" data-view="concepts"><span>✦</span><b>Concepts</b></button>
@@ -181,6 +181,17 @@
         <div class="page-intro"><span class="eyebrow">PRESSURE TRAINING</span><h1>Exam Room</h1><p>Timed local drills designed to build speed, memory and edge-case discipline. Not official 1337 exam papers.</p></div>
         <div class="exam-banner"><div><span class="eyebrow">BOSS MODE</span><h2>Can you stay calm when the clock moves?</h2><p>Use the short drills first. Finish with the 60-minute Full Mock.</p></div><button class="primary big" id="startMock">Start Full Mock →</button></div>
         <div class="exam-grid" id="examGrid"></div>
+      </section>
+
+      <section class="view" id="view-learn">
+        <div class="page-intro"><span class="eyebrow">LEARN HUB</span><h1>Learn</h1><p>Everything you need before and during the Pool — lessons, concepts, roadmap and practical tools.</p></div>
+        <div class="learn-hub-grid">
+          <button class="learn-hub-card" data-learn-jump="lessons"><span class="learn-hub-icon">📚</span><span><b>Lessons</b><small id="learnLessonsCount">12 guided lessons</small></span><em>Open →</em></button>
+          <button class="learn-hub-card" data-learn-jump="concepts"><span class="learn-hub-icon">✦</span><span><b>Concepts</b><small id="learnConceptsCount">Core mental models</small></span><em>Open →</em></button>
+          <button class="learn-hub-card" data-learn-jump="roadmap"><span class="learn-hub-icon">⌁</span><span><b>Roadmap</b><small>Day 00 → Day 13</small></span><em>Open →</em></button>
+          <button class="learn-hub-card" data-learn-jump="tools"><span class="learn-hub-icon">⚙</span><span><b>Pool Tools</b><small id="learnToolsCount">Useful terminal references</small></span><em>Open →</em></button>
+        </div>
+        <div class="learn-hub-preview panel"><div class="panel-head"><div><span class="eyebrow">START HERE</span><h2>Learn → Practice → Test → Fix</h2></div><button class="primary" data-learn-jump="lessons">Start a lesson →</button></div><p>Read a short lesson, apply the idea in Code Lab, then use Training to practice it until the pattern becomes automatic.</p></div>
       </section>
 
       <section class="view" id="view-roadmap">

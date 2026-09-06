@@ -515,6 +515,21 @@
   function renderTools() {
     $("#toolGrid").innerHTML=(window.POOLER_TOOLS||[]).map(t=>`<article class="tool-card"><h3>${esc(t[0])}</h3><p>${esc(t[2])}</p><pre>${esc(t[1])}</pre></article>`).join("");
   }
+
+  function renderLearnHub(){
+    const c=window.POOLER_CONCEPTS||[], t=window.POOLER_TOOLS||[];
+    const lc=$("#learnLessonsCount"), cc=$("#learnConceptsCount"), tc=$("#learnToolsCount");
+    if(lc) lc.textContent=`${LESSONS.length} guided lessons`;
+    if(cc) cc.textContent=`${c.length} core mental models`;
+    if(tc) tc.textContent=`${t.length} practical references`;
+    $$('[data-learn-jump]').forEach(b=>b.onclick=()=>go(b.dataset.learnJump));
+  }
+
+  function renderTraining(){
+    currentFilter=currentFilter||"ALL";
+    renderFilters();
+    renderExercises();
+  }
   function renderProfilePage() {
     const name=state.name||"Learner", pct=Math.round(state.solved.length/E.length*100);
     const profileAvatar=$("#profileAvatar"); if(profileAvatar){ if(avatarOk(state.avatar)) profileAvatar.innerHTML=`<img src="${esc(state.avatar)}" alt="">`; else profileAvatar.textContent=(name[0]||"L").toUpperCase(); profileAvatar.classList.toggle("avatar-photo",avatarOk(state.avatar)); }
@@ -582,7 +597,11 @@
     window.scrollTo({top:0,behavior:"auto"});
     if(view==="leaderboard") loadLeaderboard();
     if(view==="admin") loadAdmin();
+    if(view==="training") renderTraining();
+    if(view==="learn") renderLearnHub();
     if(view==="lessons") renderLessons($("#lessonSearch")?.value||"");
+    if(view==="concepts") renderConcepts();
+    if(view==="tools") renderTools();
     if(view==="exams") renderExams();
   }
   function restoreView(){
@@ -673,21 +692,21 @@
 
   $$(".nav-item").forEach(b=>b.onclick=()=>{ go(b.dataset.view); closeMobileSidebar(); });
   $$("[data-jump]").forEach(b=>b.onclick=()=>go(b.dataset.jump));
-  $("#continueBtn").onclick=()=>{const x=E.find(x=>!solved(x.id))||E[0];openExercise(x.id);go("lab")};
+  $("#continueBtn")?.addEventListener("click",()=>{const x=E.find(x=>!solved(x.id))||E[0];openExercise(x.id);go("lab")});
   $("#openLabDash")?.addEventListener("click",()=>go("lab"));
   $("#focusStartDash")?.addEventListener("click",()=>go("lab"));
-  $("#randomBtn").onclick=()=>randomChallenge();
-  $("#randomBtn2").onclick=()=>randomChallenge();
-  $("#bugHuntBtn").onclick=bugHunt;
-  $("#speedBtn").onclick=speedRun;
-  $("#bossBtn").onclick=boss;
-  $("#exerciseSearch").addEventListener("input",renderExercises);
-  $("#lessonSearch").addEventListener("input",e=>renderLessons(e.target.value));
+  $("#randomBtn")?.addEventListener("click",()=>randomChallenge());
+  $("#randomBtn2")?.addEventListener("click",()=>randomChallenge());
+  $("#bugHuntBtn")?.addEventListener("click",bugHunt);
+  $("#speedBtn")?.addEventListener("click",speedRun);
+  $("#bossBtn")?.addEventListener("click",boss);
+  $("#exerciseSearch")?.addEventListener("input",renderExercises);
+  $("#lessonSearch")?.addEventListener("input",e=>renderLessons(e.target.value));
   $$(".filter[data-sort]").forEach(b=>b.onclick=()=>{sortMode=b.dataset.sort;renderFilters();renderExercises()});
-  $("#loadStarter").onclick=()=>selected&&loadSelectedToLab();
-  $("#clearCode").onclick=()=>{$("#codeEditor").value="";syncEditor()};
-  $("#copyCode").onclick=async()=>{try{await navigator.clipboard.writeText($("#codeEditor").value);toast("Code copied")}catch{toast("Clipboard unavailable")}};
-  $("#runCode").onclick=runCode;
+  $("#loadStarter")?.addEventListener("click",()=>selected&&loadSelectedToLab());
+  $("#clearCode")?.addEventListener("click",()=>{$("#codeEditor").value="";syncEditor()});
+  $("#copyCode")?.addEventListener("click",async()=>{try{await navigator.clipboard.writeText($("#codeEditor").value);toast("Code copied")}catch{toast("Clipboard unavailable")}});
+  $("#runCode")?.addEventListener("click",runCode);
   $$(".lab-tab").forEach(b=>b.onclick=()=>showOutput(b.dataset.output));
   $("#openProfile").onclick=()=>go("profile"); $("#editProfile").onclick=profileOpen;
   $("#profileEditBtn").onclick=profileOpen;
@@ -814,6 +833,8 @@
     safeRender("mission", renderMission);
     safeRender("roadmap", renderRoad);
     safeRender("days", renderDays);
+    safeRender("training", renderTraining);
+    safeRender("learn", renderLearnHub);
     safeRender("concepts", renderConcepts);
     safeRender("tools", renderTools);
     safeRender("lessons", renderLessons);
