@@ -728,7 +728,6 @@
     $("#continueBtn").firstChild.textContent=l.continue+" ";
     $("#randomBtn").textContent=l.random;
     $("#randomBtn2 b").textContent=state.lang==="ar"?"فاجئني":state.lang==="fr"?"Surprends-moi":"Surprise me";
-    $("#starter");
     $("#loadStarter").textContent=l.starter; $("#clearCode").textContent=l.clear; $("#copyCode").textContent=l.copy;
     const run=$("#runCode"); if(run) run.childNodes[0].textContent=l.run+" ";
     if($("#saveProfile")) $("#saveProfile").textContent=l.save; if($("#editProfile")) $("#editProfile").textContent=l.edit; if($("#refreshLeaderboard")) $("#refreshLeaderboard").textContent=l.refresh;
