@@ -746,7 +746,7 @@
     $("#viewTitle").textContent=l.view[active]||active;
     $("#continueBtn").firstChild.textContent=l.continue+" ";
     $("#randomBtn").textContent=l.random;
-    $("#randomBtn2 b").textContent=state.lang==="ar"?"فاجئني":state.lang==="fr"?"Surprends-moi":"Surprise me";
+    const randomLabel=$("#randomBtn2 b"); if(randomLabel) randomLabel.textContent=state.lang==="ar"?"فاجئني":state.lang==="fr"?"Surprends-moi":"Surprise me";
     $("#loadStarter").textContent=l.starter; $("#clearCode").textContent=l.clear; $("#copyCode").textContent=l.copy;
     const run=$("#runCode"); if(run) run.childNodes[0].textContent=l.run+" ";
     if($("#saveProfile")) $("#saveProfile").textContent=l.save; if($("#editProfile")) $("#editProfile").textContent=l.edit; if($("#refreshLeaderboard")) $("#refreshLeaderboard").textContent=l.refresh;
@@ -848,8 +848,22 @@
   window.addEventListener("error", e => console.error("POOLER_RUNTIME_ERROR", e.error || e.message));
   window.addEventListener("unhandledrejection", e => console.error("POOLER_ASYNC_ERROR", e.reason));
 
-  markActivity(); applyTheme(); applyLang(); initEditor(); initFocus(); initGlobalSearch(); renderAll(); renderFilters(); restoreView(); refreshAccountUI(); initAuth();
-  setTimeout(startOnboarding, 250);
+  function safeStart(name, fn){
+    try { fn(); }
+    catch(err) { console.error("POOLER_STARTUP_ERROR:"+name, err); }
+  }
+  safeStart("activity", markActivity);
+  safeStart("theme", applyTheme);
+  safeStart("language", applyLang);
+  safeStart("editor", initEditor);
+  safeStart("focus", initFocus);
+  safeStart("global-search", initGlobalSearch);
+  safeStart("render-all", renderAll);
+  safeStart("filters", renderFilters);
+  safeStart("restore-view", restoreView);
+  safeStart("account-ui", refreshAccountUI);
+  safeStart("auth", initAuth);
+  setTimeout(()=>safeStart("onboarding", startOnboarding), 250);
 })();
 
 // Native-editor caret stability: keep the textarea as the only rendered code layer.

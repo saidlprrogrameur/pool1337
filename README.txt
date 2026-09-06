@@ -31,3 +31,8 @@ ADMIN CONSOLE
 - On startup the configured admin account is created/promoted automatically and its password is reset to the configured value.
 - The admin sees a private Admin Console and can edit usernames, names, bios, XP, solved/streak stats, runs, drill counts and roles; reset user progress; or permanently delete accounts.
 - Admin access is enforced server-side on /api/admin/*; users cannot grant themselves admin through registration.
+
+VERIFIED FIX:
+- Fixed startup crash caused by updating a missing #randomBtn2 <b> element.
+- Startup initialization is now isolated so one optional UI initializer cannot prevent Training/Learn content from rendering.
+- Training defaults to ALL exercises; Lessons/Concepts/Tools/Roadmap render on load.
